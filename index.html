@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="header-container">
+    <header>
+      <a href="#1"><img src="imgs/logo.png" alt="logo" height="75"></a>
+      <h1>Design Culture Now</h1>
+    </header>
+    <hr class="separador">
+    <nav>
+      <a href="#2">ERIK ADIGARD</a>
+      <a href="#3">JULIE BARGMANN</a>
+      <a href="#4">MICHAEL GABELLINI</a>
+      <a href="#5">REBECA MENDEZ</a>
+      <a href="#6">VENUE</a>
+    </nav>
+  </div>
+  <section class="seccion oscuro" id="1">
+    <div class="contenido">
+      <div class="texto2">
+        <h2>Design Culture Now</h2>
+        <p>Design Culture Now es un ciclo de conferencias que reúne a diseñadores y creativos contemporáneos para
+          compartir su trabajo, procesos y visión sobre el diseño actual. Organizado por el Cooper-Hewitt, National
+          Design Museum en New York City, el programa explora cómo el diseño influye en la cultura, la tecnología y el
+          entorno construido a través de presentaciones de profesionales destacados de distintas disciplinas.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion claro" id="2">
+    <div class="contenido">
+      <div class="imagen"><img src="imgs/erik.jpg" alt="Erik Adigard " height="430"></div>
+      <div class="texto">
+        <h2>Erik Adigard | M.A.D.</h2>
+        <p>Fecha: Thursday, September 12 <br>
+          Hora: 6:00 pm <br>
+
+          Graphic designer Erik Adigard founded McShane Adigard Design (M.A.D.) in 1989. The firm has since designed Web
+          sites, multimedia installations, and print publications for global clients, including Wired magazine.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion oscuro" id="3">
+    <div class="contenido">
+      <div class="texto">
+        <h2>Julie Bargmann | D.I.R.T. Studio</h2>
+        <p>Fecha: Tuesday, October 9 <br>
+          Hora: 7:30 pm <br>
+
+          Julie Bargmann founded D.I.R.T Studio, a landscape consultancy, in 1992. Recent projects include the
+          landscaping of the Massachusetts Museum of Contemporary Art in North Adams, and Riverside Park South and the
+          Hudson River Park in New York City.</p>
+      </div>
+      <div class="imagen"><img src="imgs/JULIE.jpg" alt="Julie Bargmann"  height="430"></div>
+    </div>
+  </section>
+
+  <section class="seccion claro" id="4">
+    <div class="contenido">
+      <div class="imagen"><img src="imgs/MICHAEL.jpg" alt="Michael Gabellini" height="430"></div>
+      <div class="texto">
+        <h2>Michael Gabellini | Gabellini Associates</h2>
+        <p>Fecha: Wednesday, November 2 <br>
+          Hora: 6:00 pm <br>
+
+          Michael Gabellini, a graduate of the Rhode Island School of Design, worked for Kohn Pedersen Fox Associates
+          before founding his own practice in 1991. Recent projects include exhibitions for the Guggenheim Museum, the
+          Marian Goodman Gallery, and the Council of Fashion Designers of America.</p>
+      </div>
+    </div>
+  </section>
+  <section class="seccion oscuro" id="5">
+    <div class="contenido">
+      <div class="texto">
+        <h2>Rebeca Méndez | Méndez Communications</h2>
+        <p>Fecha: Thursday, December 4 <br>
+          Hora: 6:30 pm <br>
+
+          Rebeca Méndez, born and raised in Mexico City and trained at the Art Center College of Design in Pasadena, has
+          designed publications for the Getty Center, the Los Angeles County Museum of Art, and the Whitney Museum of
+          American Art.</p>
+      </div>
+      <div class="imagen"><img src="imgs/REBECA.jpg" alt="Rebeca Méndez" height="430"></div>
+    </div>
+  </section>
+
+  <section class="seccion claro" id="6">
+    <div class="contenido">
+      <div class="imagen"><img src="imgs/museo.webp" alt="Cooper-Hewitt Museum"></div>
+      <div class="texto">
+        <a href="https://maps.app.goo.gl/5jkKYfthSRy8tdd78" target="_blank"><h2>HOW TO GET HERE</h2></a>
+        <p><b>Cooper-Hewitt, National Design Museum</b><br>
+          2 East 91st Street <br>
+          New York City</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <img src="imgs/logo.png" alt="logo" height="50">
+      <a href="#1">MAIN</a>
+      <a href="#2">ERIK ADIGARD</a>
+      <a href="#3">JULIE BARGMANN</a>
+      <a href="#4">MICHAEL GABELLINI</a>
+      <a href="#5">REBECA MENDEZ</a>
+      <a href="#6">COOPER-HEWITT MUSEUM</a>
+      <a href="https://maps.app.goo.gl/5jkKYfthSRy8tdd78" target="_blank">VENUE</a>
+  </footer>
+  <script>
+    const sections = document.querySelectorAll(".seccion");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+        else {
+          entry.target.classList.remove("active");
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(seccion => {
+      observer.observe(seccion);
+    });
+  </script>
+
+</body>
+
+</html>
